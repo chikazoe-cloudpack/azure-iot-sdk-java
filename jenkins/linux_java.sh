@@ -6,7 +6,7 @@ build_root=$(cd "$(dirname "$0")/.." && pwd)
 
 # -- Java SDK Run E2E --
 cd $build_root
-mvn install -DskipITs=false -T 2C -Dfailsafe.rerunFailingTestsCount=2
+mvn install -DskipITs=true -T 2C -Dfailsafe.rerunFailingTestsCount=2
 [ $? -eq 0 ] || exit $?
 
 # -- Java Dependencies --
